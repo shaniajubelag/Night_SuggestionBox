@@ -1,0 +1,8 @@
+<% if @topic.errors.any? %>
+   <p><%= pluralize(@topic.errors.count, "error") %></p>
+   <ul>
+       <% @topic.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+       <% end %>
+   </ul>
+<% end %>
